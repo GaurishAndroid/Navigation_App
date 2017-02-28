@@ -1,0 +1,137 @@
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Origin"
+                android:ems="10"
+                android:id="@+id/editOrigin"
+                android:layout_weight="1.01"
+                android:shape="rectangle"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnVoiceOrigin"
+                android:background = "@android:drawable/ic_btn_speak_now"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Destination"
+            android:ems="10"
+            android:id="@+id/editDest"
+            android:layout_weight="0.99"
+            />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnVoiceDest"
+                android:background = "@android:drawable/ic_btn_speak_now"
+                android:layout_gravity="center"
+                 />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="140px"
+            android:orientation="horizontal"
+            android:background="#9eb3a5">
+        <ImageButton
+            android:text="Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background = "@android:drawable/ic_menu_search"
+            android:id="@+id/btnsearch"
+           />
+        <ImageButton
+                android:text="Save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSave"
+            android:background = "@android:drawable/ic_menu_save"/>
+            <LinearLayout
+                android:layout_width="80px"
+                android:layout_height="90px"
+                android:paddingTop="5px">
+                <ImageButton
+                    android:text="Route"
+                    android:layout_width="80px"
+                    android:layout_height="85px"
+                    android:id="@+id/btnRoute"
+                    android:layout_gravity="top"
+                    android:background="@mipmap/route"/>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width= "match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/Relate">
+
+                <Button
+                    android:text="Type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnType"
+                    android:layout_toLeftOf="@+id/btnStreet"
+                    />
+                <Button
+                    android:text="Street"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnStreet"
+                    android:layout_alignParentRight="true"
+                    />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout  android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/top">
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.abhisheki.myapplication.MapsActivity" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/down">
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:name="com.google.android.gms.maps.StreetViewPanoramaFragment"
+            android:id="@+id/streetviewpanorama"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
+
